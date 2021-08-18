@@ -766,9 +766,10 @@ address {
   width: 100%;
   height: 294px;
   background-color: var(--second-overlay-color);
+  opacity: 0;
 
   transform: translateY(140%);
-  transition: transform var(--transition-duration) var(--timing-function);
+  transition: transform var(--transition-duration) var(--timing-function), opacity var(--transition-duration) var(--timing-function);
 
 }
 
@@ -789,4 +790,5 @@ address {
 .project:hover .project-overlay ,
 .project:focus .project-overlay {
   transform: translateY(0);
+  opacity: 1;
 }
