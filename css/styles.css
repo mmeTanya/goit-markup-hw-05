@@ -67,8 +67,6 @@ address {
 
 .header {
   border-bottom: 1px solid var(--primary-border-color);
-
-  padding: 24px 0 25px;
 }
 
 .header .container {
@@ -118,6 +116,8 @@ address {
 
 .nav-link {
   display: block;
+  padding: 32px 0px;
+
   color: var(--primary-title-text-color);
 
   font-weight: 500;
@@ -143,7 +143,7 @@ address {
 
   position: absolute;
   left: 0;
-  bottom: -32px;
+  bottom: -1px;
 
   display: block;
   width: 100%;
@@ -162,6 +162,7 @@ address {
 
 .contact-us .contact-link {
   color: var(--primary-text-color);
+  fill: currentColor;
 
   font-weight: 500;
   font-size: 14px;
@@ -189,9 +190,7 @@ address {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: currentColor;
 
-  transition: color var(--transition-duration) var(--timing-function);
 }
 
 .icon-smartphone {
@@ -200,16 +199,7 @@ address {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: currentColor;
-
-  transition: color var(--transition-duration) var(--timing-function);
-}
-
-.icon-envelope:hover,
-.icon-envelope:focus,
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-  color: var(--accent-color);
+ 
 }
 
 /* hero */
@@ -721,6 +711,10 @@ address {
   transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
 
 .projects-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
@@ -766,10 +760,9 @@ address {
   width: 100%;
   height: 294px;
   background-color: var(--second-overlay-color);
-  opacity: 0;
 
-  transform: translateY(140%);
-  transition: transform var(--transition-duration) var(--timing-function), opacity var(--transition-duration) var(--timing-function);
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--timing-function);
 
 }
 
@@ -790,5 +783,4 @@ address {
 .project:hover .project-overlay ,
 .project:focus .project-overlay {
   transform: translateY(0);
-  opacity: 1;
 }
